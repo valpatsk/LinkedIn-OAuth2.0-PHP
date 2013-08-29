@@ -3,6 +3,7 @@
     (c) ContentMX.com
     Created: 28/08/2013
     Author: Valery Patskevich
+    valpatsk@gmail.com
 */
 
 require_once('OAuth2.class.php');
