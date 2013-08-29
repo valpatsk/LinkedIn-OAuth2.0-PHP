@@ -3,6 +3,7 @@
     (c) ContentMX.com
     Created: 28/08/2013
     Author: Valery Patskevich
+    valpatsk@gmail.com
 */
 
 class OAuth2{
