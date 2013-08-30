@@ -269,7 +269,7 @@ class LinkedInOAuth2 extends OAuth2 {
 		return json_decode($result,true);
 	}
 	//returns as ARRAY, if chaning to object change in getGroupPostResponses
-	function getPostMeta($post_id){
+	protected function getPostMeta($post_id){
 		$fields = array(
 			'id',
 			'site-group-post-url',
