@@ -1,7 +1,9 @@
 LinkedIn.OAuth2.class
 =====================
 
-LinkedIn OAuth 2.0 Class.<br>
+Please take OAuth2.class.php from my repo OAuth2.0-class https://github.com/valpatsk/OAuth2.0-class .
+
+LinkedIn OAuth 2.0 Class.
 Most necessary functions to interact with LinkedIn through OAuth 2.0.
 
 HOW TO USE:
