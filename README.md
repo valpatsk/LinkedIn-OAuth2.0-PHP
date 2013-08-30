@@ -10,7 +10,7 @@ HOW TO USE:
 
 1. Redirect user to Auth screen:
 <pre>
-require_once("lib/classes/LinkedIn.OAuth2.class.php");
+require_once("LinkedIn.OAuth2.class.php");
 //Create LinkedIn app to get keys
 $linkedin_api_key = "...";
 $linkedin_secret = "...";
@@ -24,7 +24,7 @@ $connect_link = $LIOAuth->getAuthorizeUrl($linkedin_api_key,$redirect_url);
 
 2. Get Access Token
 <pre>
-require_once("lib/classes/LinkedIn.OAuth2.class.php");
+require_once("LinkedIn.OAuth2.class.php");
 $linkedin_api_key = "...";
 $linkedin_secret = "...";
 //put here your redirect url
