@@ -22,9 +22,9 @@ class LinkedInOAuth2 extends OAuth2 {
 		if($scope!=''){
 			if(is_array($scope)){
 				$additional_args['scope']=implode(' ',$scope);
-				$additional_args['scope'] = urlencode($additional_args['scope']);
+				$additional_args['scope'] = $additional_args['scope'];
 			}else{
-				$additional_args['scope'] = urlencode($scope);
+				$additional_args['scope'] = $scope;
 			}
 		}
 		$additional_args['state'] = md5(time());
