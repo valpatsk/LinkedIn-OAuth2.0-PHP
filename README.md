@@ -9,7 +9,7 @@ Most necessary functions to interact with LinkedIn through OAuth 2.0.
 HOW TO USE:
 
 1. Redirect user to Auth screen:
-<pre>
+```php
 require_once("LinkedIn.OAuth2.class.php");
 //Create LinkedIn app to get keys
 $linkedin_api_key = "...";
@@ -19,11 +19,11 @@ $redirect_url="...";
 $LIOAuth = new LinkedInOAuth2();
 $connect_link = $LIOAuth->getAuthorizeUrl($linkedin_api_key,$redirect_url);
 //show link or just redirect
-</pre>
+```
 
 
 2. Get Access Token
-<pre>
+```php
 require_once("LinkedIn.OAuth2.class.php");
 $linkedin_api_key = "...";
 $linkedin_secret = "...";
@@ -37,11 +37,11 @@ $access_token = $LIOAuth->getAccessToken($linkedin_api_key,$linkedin_secret,$red
 $LIOAuth->getProfile();
 //How to use futher with existing access_token:
 $LIOAuth = new LinkedInOAuth2($access_token);
-</pre>
+```
 
 
 3. List of possible methods
-<pre>
+```php
 getProfile();
 getUserProfile($user_id);
 getConnections();
@@ -64,4 +64,4 @@ postToCompany($company_id,$message,$content=array()); // $content=array('title'=
 deleteFromGroup($post_id);
 commentToGroupPost($post_id,$response_text);
 commentToNetworkPost($post_id,$response_text);
-</pre>
+```
