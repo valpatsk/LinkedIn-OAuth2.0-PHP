@@ -21,7 +21,7 @@ class LinkedInOAuth2 extends OAuth2 {
 		$additional_args = array();
 		if($scope!=''){
 			if(is_array($scope)){
-				$additional_args['scope']=implode(' ',$scope);
+				$additional_args['scope']=implode(" ",$scope);
 				$additional_args['scope'] = $additional_args['scope'];
 			}else{
 				$additional_args['scope'] = $scope;
@@ -39,7 +39,7 @@ class LinkedInOAuth2 extends OAuth2 {
 			return false;
 		}else{
 			$this->access_token = $result['access_token'];
-			return $result['access_token'];
+			return $result;
 		}
 	}
 
@@ -214,9 +214,9 @@ class LinkedInOAuth2 extends OAuth2 {
 		$params['args']['format']='json';
 		if($start != 0 )$params['args']['start']=$start;
 		if($count != 0 )$params['args']['count']=$count;
-		//if($self){
+		if($self){
 		$params['args']['scope']='self';
-		//}
+		}
 		$params['args']['type']='SHAR';
 		$params['args']['order']='recency';
 		$result =  $this->makeRequest($params);

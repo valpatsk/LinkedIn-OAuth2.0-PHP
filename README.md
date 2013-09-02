@@ -32,7 +32,9 @@ $redirect_url="...";
 $code = isset($_REQUEST['code'])?$_REQUEST['code']:'';
 $LIOAuth = new LinkedInOAuth2();
 //you can put code as argument or it will be taken from $_REQUEST
-$access_token = $LIOAuth->getAccessToken($linkedin_api_key,$linkedin_secret,$redirect_url,$code);
+$access_token_arr = $LIOAuth->getAccessToken($linkedin_api_key,$linkedin_secret,$redirect_url,$code);
+$access_token = $access_token_arr["access_token"];
+$expires_in = $access_token_arr["expires_in"];
 //you can already use $LIOAuth object
 $LIOAuth->getProfile();
 //How to use futher with existing access_token:
